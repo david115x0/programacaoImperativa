@@ -22,12 +22,10 @@ console.log(selecionar);
   [1,5,9,3,7] => “1 – 5 – 9 – 3 – 7” */
 
 let numeros = [20, 800, 500, 83];
-let separador = numeros.join("-");
-
-let separado = numeros.reduce( (acumulador, valorAtual)=> acumulador + valorAtual, 0
-);
-
-console.log(separador);
+let separador = numeros.reduce(function (a, b) {
+    return `${a} - ${b}`}
+    );
+console.log(separador)
 
 /*Crie um array de animais, após isso passe por cada índice utilizando o .forEach()
  e imprima a frase “O animal é NOME_DO_ANIMAL”. */
