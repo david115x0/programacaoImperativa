@@ -20,26 +20,36 @@ console.log(novoValor(numeros));
 // com apenas as palavras que têm mais do que uma quantidade de letras maior do que o número informado
 
 let nomes = ['carlos', 'albert', 'maria', 'joao'];
-let resultado = nomes.toString();
-console.log(resultado);
 
-value = nomes.join("")
-console.log(value.length)
+function converter(array, valor){
+    return array.filter(palavra=>palavra.length>valor);
 
-// USAR O SPLIT PARA FAZER esse exercicio
-// DAR SPLIT COM VIRGULA PARA CRIRAR OUTROS ARRAYS SEPARADOS, PERFEITO!!!
-
-console.log(resultado.split(','));
-
-function iterar(palavra, valor1){
-    
 }
+console.log(converter(nomes, 7));
 
 
-// EXERCICIO 3
+// EXERCICIO 3: Crie um array de objetos literais, onde cada objeto será um aluno e terá dois
+//atributos: nome e nota. Crie duas funções que ordenam o array: uma ordenará os
+//alunos em ordem alfabética e a outra o fará por nota, da mais alta para a mais baixa.
+//(Analise qual método seria apropriado para este caso. Recomendamos que você
+//consulte a documentação do MDN:
 
-let objetos = [];
+criarAluno=(materia, media) => {
+    let aluno = {};
+    aluno.materia = materia;
+    aluno.media = media;
 
-
-
-
+    function notaDoAluno(x){
+        return x.sort();
+    };
+    aluno.notaDoAluno = notaDoAluno;
+    function classe(x){
+        return x.sort();
+    };
+    aluno.classe = classe;
+    return aluno;
+};
+let aluno1 = criarAluno('matematica', 6);
+aluno1.classe();
+aluno1.classe.push(['david','carlos']);
+console.log(aluno1);
