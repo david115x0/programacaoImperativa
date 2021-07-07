@@ -18,15 +18,22 @@ console.log(novoValor(numeros));
 
 // 2.EXERCICIO
 // com apenas as palavras que têm mais do que uma quantidade de letras maior do que o número informado
+
 let nomes = ['carlos', 'albert', 'maria', 'joao'];
+let resultado = nomes.toString();
+console.log(resultado);
+
+value = nomes.join("")
+console.log(value.length)
+
+// USAR O SPLIT PARA FAZER esse exercicio
+// DAR SPLIT COM VIRGULA PARA CRIRAR OUTROS ARRAYS SEPARADOS, PERFEITO!!!
+
+console.log(resultado.split(','));
 
 function iterar(palavra, valor1){
-    palavra.filter((num)=>{
-        return (num.forEach((x)=>{x.length}) > valor1);
-    }
-        return palavra;
-};
-console.log(iterar(nomes, 2));
+    
+}
 
 
 // EXERCICIO 3
