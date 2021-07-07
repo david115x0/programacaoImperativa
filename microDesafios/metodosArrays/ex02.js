@@ -34,22 +34,15 @@ console.log(converter(nomes, 7));
 //(Analise qual método seria apropriado para este caso. Recomendamos que você
 //consulte a documentação do MDN:
 
-criarAluno=(materia, media) => {
-    let aluno = {};
-    aluno.materia = materia;
-    aluno.media = media;
-
-    function notaDoAluno(x){
-        return x.sort();
-    };
-    aluno.notaDoAluno = notaDoAluno;
-    function classe(x){
-        return x.sort();
-    };
-    aluno.classe = classe;
-    return aluno;
+let aluno = [
+    {nomes: ['david','carlos','albert','ana'], nota:[3, 8, 0, 4, 3]}
+];
+function ordenarNome (){
+    return aluno[0].nomes.sort();
 };
-let aluno1 = criarAluno('matematica', 6);
-aluno1.classe();
-aluno1.classe.push(['david','carlos']);
-console.log(aluno1);
+function ordenarNotas(){
+    return aluno[0].nota.sort((a, b) => b-a);
+};
+
+console.log(ordenarNome(aluno[0].nomes));
+console.log(ordenarNotas(aluno[0].nota));
